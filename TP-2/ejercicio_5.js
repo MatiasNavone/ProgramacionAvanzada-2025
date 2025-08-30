@@ -9,6 +9,6 @@ const paquetesDatos = [
 
 //filtro mayores que 1000
 const tamFiltrar = paquetesDatos.filter(tam => tam.tamaño > 1000);
-// .sort ayuda a ordenar
+// .sort ayuda a ordenar de prioridad >
 const paquetesOrdenados = tamFiltrar.sort((a, b) => b.prioridad - a.prioridad);
 console.log(tamFiltrar);

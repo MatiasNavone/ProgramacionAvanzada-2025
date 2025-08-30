@@ -27,8 +27,8 @@ conexionesPorNodo[nodo.id] = 0;
 
 // Tu código aquí para contar las conexiones
 topologiaRed.conexiones.forEach(con => {
-  conexionesPorNodo[con.origen] += 1;  // suma para el nodo de origen
-  conexionesPorNodo[con.destino] += 1; // suma para el nodo de destino
+  conexionesPorNodo[con.origen] ++;  // suma para el nodo de origen
+  conexionesPorNodo[con.destino] ++; // suma para el nodo de destino
 });
 
 // Encuentra los nodos con más conexiones
@@ -36,6 +36,10 @@ topologiaRed.conexiones.forEach(con => {
 const nodosOrdenados = Object.entries(conexionesPorNodo)
 .sort((a, b) => b[1] - a[1]);
 
+const sugerencias = nodosOrdenados //Tomamos los nodos con más de 2 conexiones y armamos un mensaje recomendado (más ancho de banda o segmentar).
+  .filter(([_, cant]) => cant > 2)
+  .map(([id, cant]) => `Nodo ${id} con ${cant} conexiones: considerar subir ancho de banda o segmentar.`);
 
 console.log("Conexiones por nodo:", conexionesPorNodo);
 console.log("Nodos ordenados por numero de conexiones:", nodosOrdenados); 
+console.log("Sugerencias de optim:", sugerencias);

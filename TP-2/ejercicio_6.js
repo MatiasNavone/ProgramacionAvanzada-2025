@@ -21,7 +21,7 @@ let maxTraf = 0;
 
 const horaMayorTrafico = Object.keys(traficoRed)
     .reduce((horaMax, hora) => 
-    traficoRed[hora] > traficoRed[horaMax] ? hora : horaMax    //Recorremos solo las horas
+    traficoRed[hora] > traficoRed[horaMax] ? hora : horaMax    //Recorre solo las horas
     );                                                         //
 
 console.log(`Total de datos transferidos: ${totalDatos} MB`);

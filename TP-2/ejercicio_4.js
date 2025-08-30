@@ -8,4 +8,4 @@ const servidores = [
 ];
 
 const direccionesIP = servidores.map(servidor => servidor.ip);
-console.log(direccionesIP);
+console.log(direccionesIP); // contiene solo las direcciones ip

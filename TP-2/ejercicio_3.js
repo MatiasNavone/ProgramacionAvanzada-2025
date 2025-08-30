@@ -8,4 +8,4 @@ const dispositivosRed = [
 ];
 
 const filtMarca = dispositivosRed.filter(dispositivo => dispositivo.marca === "TP-Link");
-console.log(filtMarca);
+console.log(filtMarca); //filtra los dispositivos por marca

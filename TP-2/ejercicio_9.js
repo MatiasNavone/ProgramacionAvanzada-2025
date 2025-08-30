@@ -26,8 +26,8 @@ topologiaRed.nodos.forEach((nodo) => {
 });
 
 topologiaRed.conexiones.forEach((con) => {
-  conexionesPorNodo[con.origen] += 1; //suma por origen y por destino
-  conexionesPorNodo[con.destino] += 1; //suma el nodo que recibe le enlace
+  conexionesPorNodo[con.origen] ++; //suma por origen y por destino
+  conexionesPorNodo[con.destino] ++; //suma el nodo que recibe le enlace
 });
 
 // Encuentra los nodos con más conexiones
