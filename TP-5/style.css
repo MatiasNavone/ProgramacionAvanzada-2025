@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  padding: 1em;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+header h1 {
+  font-size: 1.8em;
+  margin-top: 0.5em;
+}
+
+.filters {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+  padding: 0.5em;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="range"],
+select {
+  padding: 0.5em;
+  margin-top: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  border: 1px solid #333;
+  background: #fff;
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-size: 0.95em;
+}
+
+button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.results ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0;
+}
+
+.results li {
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 8px;
+  background: #f9f9f9;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.results li:hover {
+  background: #d0f0ff;
+  transform: translateY(-2px);
+}
+
+.results li span {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Resaltado del vuelo más barato y más caro */
+.cheapest {
+  border: 2px solid #4CAF50;
+  background: #e8f5e9;
+}
+
+.expensive {
+  border: 2px solid #F44336;
+  background: #ffebee;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .results li {
+    grid-template-columns: 1fr;
+  }
+}

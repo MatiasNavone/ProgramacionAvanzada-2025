@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacaciones Nelsona</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="https://flybondi.com/assets/images/logo.svg" height="80" alt="Flybondi Logo">
+    <h1>Encuentra tus vacaciones Nelsona!</h1>
+  </header>
+
+  <main>
+    <section class="filters">
+      <div class="filter-card">
+        <label>🧑‍🤝‍🧑 Cantidad de pasajeros:
+          <input type="number" id="passengers" min="1" value="1">
+        </label>
+      </div>
+
+      <div class="filter-card">
+        <label>🌍 Destino (opcional):
+          <input type="text" id="destination" placeholder="Ej: COR, MDZ, BRC">
+        </label>
+      </div>
+
+      <div class="filter-card">
+        <label>💰 Precio máximo: $<span id="price-value">800</span>
+          <input type="range" id="max-price" min="100" max="800" step="50" value="800">
+        </label>
+      </div>
+
+      <div class="filter-card">
+        <label>🔽 Ordenar por precio:
+          <select id="sortOrder">
+            <option value="asc">Menor a Mayor</option>
+            <option value="desc">Mayor a Menor</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filter-card">
+        <button id="searchBtn">Buscar</button>
+      </div>
+    </section>
+
+    <section class="results">
+      <ul id="resultsList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Vacaciones Nelsona</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
