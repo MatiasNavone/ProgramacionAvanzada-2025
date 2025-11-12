@@ -1,0 +1,18 @@
+{
+  "name": "tp7-backend",
+  "version": "1.0.0",
+  "description": "Backend para simular transacciones bancarias - TP7 Matías Navone",
+  "main": "api.service.js",
+  "scripts": {
+    "api": "node api.service.js",
+    "orchestrator": "node orchestrator.service.js",
+    "gateway": "node gateway.ws.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "kafkajs": "^2.2.4",
+    "uuid": "^9.0.1",
+    "ws": "^8.14.2"
+  }
+}
