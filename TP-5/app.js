@@ -34,6 +34,7 @@ searchBtn.addEventListener('click', () => {
   let passengers = passengersInput ? parseInt(passengersInput) : 1;
   if (passengers < 1) passengers = 1;
 
+  const origin = document.getElementById('origin').value.toLowerCase();
   const destination = document.getElementById('destination').value.toLowerCase();
   const sortOrder = document.getElementById('sortOrder').value;
   const maxPrice = parseInt(priceSlider.value);
@@ -47,6 +48,11 @@ searchBtn.addEventListener('click', () => {
   // Filtrar por destino 
   if (destination) {
     filtered = filtered.filter(flight => flight.destination.toLowerCase().includes(destination));
+  }
+
+  // Filtrar por origen
+  if (origin) {
+    filtered = filtered.filter(flight => flight.origin.toLowerCase().includes(origin));
   }
 
   // Ordenar 
